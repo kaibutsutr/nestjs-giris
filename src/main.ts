@@ -1,15 +1,5 @@
-import { Controller, Module, Get } from "@nestjs/common"; // we almost always import from /common
+import { AppModule } from "./app.module"; // need appmodule in the function
 import { NestFactory } from "@nestjs/core"; // this is only exception
-
-@Controller()
-class AppController {
-  @Get()
-  getRootRoute() {
-    return "Hello world";
-  }
-}
-@Module({ controllers: [AppController] })
-class AppModule {}
 
 async function bootstrap() {
   // our starter function to start the server
